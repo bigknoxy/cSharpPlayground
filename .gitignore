@@ -396,3 +396,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/Console/GoofingAround/language_server_windows_x64.exe
+/Console/GoofingAround/language-server.gz
+/Console/GoofingAround/codeium_api_key
+/.vscode/launch.json
+/.vscode/tasks.json
