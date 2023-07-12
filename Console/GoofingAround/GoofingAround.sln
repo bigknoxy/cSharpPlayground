@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoofingAround", "GoofingAround\GoofingAround.csproj", "{B7CD4081-0D53-4C83-A73E-0C8AC90A270B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoofingAround", "GoofingAround\GoofingAround.csproj", "{B7CD4081-0D53-4C83-A73E-0C8AC90A270B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoofingAroundTests", "GoofingAroundTests\GoofingAroundTests.csproj", "{3BB20C00-F347-4278-956C-2CD99114BEA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B7CD4081-0D53-4C83-A73E-0C8AC90A270B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7CD4081-0D53-4C83-A73E-0C8AC90A270B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7CD4081-0D53-4C83-A73E-0C8AC90A270B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BB20C00-F347-4278-956C-2CD99114BEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BB20C00-F347-4278-956C-2CD99114BEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BB20C00-F347-4278-956C-2CD99114BEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BB20C00-F347-4278-956C-2CD99114BEA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
