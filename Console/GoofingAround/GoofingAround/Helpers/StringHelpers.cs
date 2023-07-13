@@ -1,4 +1,4 @@
-namespace GoofingAround.StringHelpers;
+namespace GoofingAround.Helpers;
 
 public static class StringHelpers
 {
@@ -8,15 +8,15 @@ public static class StringHelpers
         char[] charArray = s.ToCharArray();
         for (int i = 0; i < charArray.Length; i++)
         {
-            if (Char.IsLetter(charArray[i]))
+            if (char.IsLetter(charArray[i]))
             {
-                if (Char.IsUpper(charArray[i]))
+                if (char.IsUpper(charArray[i]))
                 {
-                    tempChars[i] = Char.ToLower(charArray[i]);
+                    tempChars[i] = char.ToLower(charArray[i]);
                 }
-                else if (Char.IsLower(charArray[i]))
+                else if (char.IsLower(charArray[i]))
                 {
-                    tempChars[i] = Char.ToUpper(charArray[i]);
+                    tempChars[i] = char.ToUpper(charArray[i]);
                 }
             }
             else
@@ -36,7 +36,7 @@ public static class StringHelpers
         int counter = 0;
 
         for (int i = charArray.Length - 1; i >= 0; i--)
-        {            
+        {
             tempChars[counter] = charArray[i];
             counter++;
         }
@@ -62,4 +62,14 @@ public static class StringHelpers
         return count;
     }
 
+    public static bool IsPalindrome(this string input)
+    {
+        // Remove any non-alphanumeric characters and convert to lowercase
+        string cleanedInput = new string(input.Where(char.IsLetterOrDigit).Select(char.ToLower).ToArray());
+
+        // Compare the cleaned input with its reverse
+        string reversedInput = new string(cleanedInput.Reverse().ToArray());
+
+        return cleanedInput == reversedInput;
+    }
 }

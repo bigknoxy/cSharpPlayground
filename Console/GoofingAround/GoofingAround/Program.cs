@@ -1,4 +1,4 @@
-﻿using GoofingAround.StringHelpers;
+﻿using GoofingAround.Helpers;
 
 namespace GoofingAround;
 
@@ -17,6 +17,11 @@ internal class Program
         Console.WriteLine($"Reversing the text {str.Reverse()}");
         Console.WriteLine();
 
+        string input = "level";
+        Console.WriteLine($"Is \"{input}\" a palindrome? {input.IsPalindrome()}");
+
+        input = "chicken";
+        Console.WriteLine($"Is \"{input}\" a palindrome? {input.IsPalindrome()}");
         //leave console window open until user presses a key
         Console.Read();        
     }

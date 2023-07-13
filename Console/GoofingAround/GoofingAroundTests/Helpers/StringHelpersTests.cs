@@ -1,6 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using GoofingAround.Helpers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace GoofingAround.StringHelpers.Tests
+namespace GoofingAround.Tests.Helpers
 {
     [TestClass()]
     public class StringHelpersTests
@@ -192,6 +193,58 @@ namespace GoofingAround.StringHelpers.Tests
 
             // Assert
             Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void IsPalindrome_ValidPalindrome_ReturnsTrue()
+        {
+            // Arrange
+            string palindrome = "level";
+
+            // Act
+            bool result = palindrome.IsPalindrome();
+
+            // Assert
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void IsPalindrome_ValidNonPalindrome_ReturnsFalse()
+        {
+            // Arrange
+            string nonPalindrome = "hello";
+
+            // Act
+            bool result = nonPalindrome.IsPalindrome();
+
+            // Assert
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void IsPalindrome_EmptyString_ReturnsTrue()
+        {
+            // Arrange
+            string emptyString = "";
+
+            // Act
+            bool result = emptyString.IsPalindrome();
+
+            // Assert
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void IsPalindrome_StringWithWhitespace_ReturnsTrue()
+        {
+            // Arrange
+            string stringWithWhitespace = "A man a plan a canal Panama";
+
+            // Act
+            bool result = stringWithWhitespace.IsPalindrome();
+
+            // Assert
+            Assert.IsTrue(result);
         }
     }
 }
