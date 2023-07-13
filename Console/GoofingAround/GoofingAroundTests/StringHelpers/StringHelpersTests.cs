@@ -89,5 +89,109 @@ namespace GoofingAround.StringHelpers.Tests
             Assert.AreEqual(expected, result);
         }
 
+        [TestMethod]
+        public void LetterCount_ShouldHandleEmptyString()
+        {
+            // Arrange
+            string stringToCheck = "";
+            char letterToFind = 'a';
+            int expected = 0;
+
+            // Act
+            int result = StringHelpers.LetterCount(stringToCheck, letterToFind);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void LetterCount_CountUpperAndLowercase()
+        {
+            // Arrange
+            string stringToCheck = "Good ole boys, gettin' down on the farm";
+            char letterToFind = 'g';
+            int expected = 2;
+
+            // Act
+            int result = StringHelpers.LetterCount(stringToCheck, letterToFind);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void LetterCount_ShouldReturnCount_WhenLetterToFindIsASpace()
+        {
+            // Arrange
+            string stringToCheck = "Hello World";
+            char letterToFind = ' ';
+            int expected = 1;
+
+            // Act
+            int result = StringHelpers.LetterCount(stringToCheck, letterToFind);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void LetterCount_ShouldIgnoreCase_WhenComparingLetterToFind()
+        {
+            // Arrange
+            string stringToCheck = "Hello World";
+            char letterToFind = 'H';
+            int expected = 1;
+
+            // Act
+            int result = StringHelpers.LetterCount(stringToCheck, letterToFind);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void LetterCount_ShouldReturnCount_WhenLetterToFindIsInString()
+        {
+            // Arrange
+            string stringToCheck = "Hello World";
+            char letterToFind = 'o';
+            int expected = 2;
+
+            // Act
+            int result = StringHelpers.LetterCount(stringToCheck, letterToFind);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void LetterCount_ShouldReturnZero_WhenLetterToFindIsNotInString()
+        {
+            // Arrange
+            string stringToCheck = "Hello World";
+            char letterToFind = 'a';
+            int expected = 0;
+
+            // Act
+            int result = StringHelpers.LetterCount(stringToCheck, letterToFind);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void LetterCount_ShouldReturnZero_WhenStringIsEmpty()
+        {
+            // Arrange
+            string stringToCheck = "";
+            char letterToFind = 'a';
+            int expected = 0;
+
+            // Act
+            int result = StringHelpers.LetterCount(stringToCheck, letterToFind);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
     }
 }

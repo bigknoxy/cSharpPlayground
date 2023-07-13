@@ -42,4 +42,24 @@ public static class StringHelpers
         }
         return new string(tempChars);
     }
+
+    //Search a string to see how many of a certain char are in it
+    public static int LetterCount(string stringToSearch, char letterToFind)
+    {
+        // Convert both stringToSearch and letterToFind to lowercase or uppercase
+        stringToSearch = stringToSearch.ToLower();
+        letterToFind = char.ToLower(letterToFind);
+
+        int count = 0;
+        for (int i = 0; i < stringToSearch.Length; i++)
+        {
+            // Compare the char case-insensitively
+            if (char.ToLower(stringToSearch[i]) == letterToFind)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+
 }

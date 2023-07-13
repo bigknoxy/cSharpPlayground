@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoofingAround", "GoofingAround\GoofingAround.csproj", "{B7CD4081-0D53-4C83-A73E-0C8AC90A270B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoofingAroundTests", "GoofingAroundTests\GoofingAroundTests.csproj", "{3BB20C00-F347-4278-956C-2CD99114BEA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoofingAround.Tests", "GoofingAroundTests\GoofingAround.Tests.csproj", "{3BB20C00-F347-4278-956C-2CD99114BEA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
